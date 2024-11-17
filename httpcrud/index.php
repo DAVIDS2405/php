@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/autoload.php';
 
-use Exception;
 
 use app\exceptions\DataException;
 use app\exceptions\ValidationException;
@@ -23,12 +22,12 @@ $validator = new Validator();
 try {
     switch ($_SERVER['REQUEST_METHOD']) {
         case 'POST';
-            $body = json_decode(file_get_contents('php//input'), true);
+            $body = json_decode(file_get_contents('php://input'), true);
             $add = new Create($repository, $validator);
             $add->add($body);
             break;
         case 'PUT';
-            $body = json_decode(file_get_contents('php//input'), true);
+            $body = json_decode(file_get_contents('php://input'), true);
             $update = new Update($repository, $validator);
             $update->update($body);
             break;
@@ -50,7 +49,10 @@ try {
 } catch (DataException $e) {
     http_response_code(404);
     echo json_encode(['error' => $e->getMessage()]);
-} catch (Exception $e) {
+} catch (\Exception $e) {
     http_response_code(500);
+    echo json_encode(['error' => $e->getMessage()]);
+} catch (TypeError $e) {
+    http_response_code(400);
     echo json_encode(['error' => $e->getMessage()]);
 }
