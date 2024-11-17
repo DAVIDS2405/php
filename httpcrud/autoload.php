@@ -13,3 +13,9 @@ require_once __DIR__ . '/business/add.php';
 require_once __DIR__ . '/business/get.php';
 require_once __DIR__ . '/business/update.php';
 require_once __DIR__ . '/business/delete.php';
+
+require_once __DIR__ . '/database/base_repository.php';
+require_once __DIR__ . '/database/repositoryDB.php';
+
+
+require_once __DIR__ . '/config.php';
