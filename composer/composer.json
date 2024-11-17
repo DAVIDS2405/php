@@ -1,0 +1,20 @@
+{
+    "name": "david/test",
+    "description": "pruebas composer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "David\\Test\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "skip"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "nesbot/carbon": "^3.0@dev",
+        "phpoffice/phpspreadsheet": "dev-master"
+    }
+}
