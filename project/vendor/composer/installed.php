@@ -3,11 +3,11 @@
         'name' => 'sebas/project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'cfcdb9b6fb8069f431e9b662614f36814eeaabe6',
+        'reference' => 'fc73f72b84809c82e726a6254d7b6be22e196d33',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'dev' => true,
+        'dev' => false,
     ),
     'versions' => array(
         'maennchen/zipstream-php' => array(
@@ -85,7 +85,7 @@
         'sebas/project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'cfcdb9b6fb8069f431e9b662614f36814eeaabe6',
+            'reference' => 'fc73f72b84809c82e726a6254d7b6be22e196d33',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
