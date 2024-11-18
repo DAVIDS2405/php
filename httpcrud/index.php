@@ -16,13 +16,14 @@ use app\data\Repository;
 use app\validators\Validator;
 
 use app\database\RepositoryDB;
-
+use app\session\Session;
 
 $validator = new Validator();
 
 try {
     //$repository = new Repository();
-    $repository = new RepositoryDB();
+    //$repository = new RepositoryDB();
+    $repository = new Session();
     switch ($_SERVER['REQUEST_METHOD']) {
         case 'POST';
             $body = json_decode(file_get_contents('php://input'), true);
