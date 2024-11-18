@@ -1,0 +1,24 @@
+{
+    "name": "sebas/project",
+    "autoload": {
+        "psr-4": {
+            "Sebas\\Project\\": "src/",
+            "app\\interface\\": "src/interface/",
+            "app\\data\\": "src/data/",
+            "app\\excel\\": "src/excel/",
+            "app\\business\\": "src/business/"
+        },
+        "files": [
+            "src/config/database.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "David Basantes",
+            "email": "sebastian2405lucero@hotmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^3.4"
+    }
+}
